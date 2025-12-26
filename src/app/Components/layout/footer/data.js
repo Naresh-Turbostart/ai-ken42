@@ -49,82 +49,82 @@ export const footerData = [
   //     },
   //   ],
   // },
-  {
-    title: "Solutions",
-    list: [
-      {
-        name: "KenRoll",
-        path: "/solutions/kenroll",
-      },
-      {
-        name: "KenLearn",
-        path: "/solutions/kenlearn",
-      },
-      {
-        name: "KenMeet",
-        path: "/solutions/kenmeet",
-      },
-       {
-        name: "KenFin",
-        path: "/solutions/kenfin",
-      },
+  // {
+  //   title: "Solutions",
+  //   list: [
+  //     {
+  //       name: "KenRoll",
+  //       path: "/solutions/kenroll",
+  //     },
+  //     {
+  //       name: "KenLearn",
+  //       path: "/solutions/kenlearn",
+  //     },
+  //     {
+  //       name: "KenMeet",
+  //       path: "/solutions/kenmeet",
+  //     },
+  //      {
+  //       name: "KenFin",
+  //       path: "/solutions/kenfin",
+  //     },
        
-       {
-        name: "KenCareers",
-        path: "/solutions/kencareers",
-      },
-       {
-        name: "KenOps",
-        path: "/solutions/kenops",
-      },
-       {
-        name: "KenCompliance",
-        path: "/solutions/kencompliance",
-      },
-       {
-        name: "KenNovate",
-        path: "/solutions/kennovate",
-      },
-    ],
-  },
-  {
-    title: "Resources",
-    list: [
-      {
-        name: "Blog",
-        path: "/blog",
-      },
-      {
-        name: "Career",
-        path: "/careers",
-      },
-      {
-        name: "Case Study",
-        path: "/case-studies",
-      },
-      {
-        name: "Awards",
-        path: "/award-nominations",
-      },
-    ],
-  },
-  {
-    title: "Legal",
-    list: [
-      {
-        name: "Privacy Policy",
-        path: "/privacy-policy",
-      },
-      {
-        name: "Terms of Use",
-        path: "/terms-of-use",
-      },
-      {
-        name: "General T&C",
-        path: "/general-subscription-t-cs",
-      },
-    ],
-  },
+  //      {
+  //       name: "KenCareers",
+  //       path: "/solutions/kencareers",
+  //     },
+  //      {
+  //       name: "KenOps",
+  //       path: "/solutions/kenops",
+  //     },
+  //      {
+  //       name: "KenCompliance",
+  //       path: "/solutions/kencompliance",
+  //     },
+  //      {
+  //       name: "KenNovate",
+  //       path: "/solutions/kennovate",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Resources",
+  //   list: [
+  //     {
+  //       name: "Blog",
+  //       path: "/blog",
+  //     },
+  //     {
+  //       name: "Career",
+  //       path: "/careers",
+  //     },
+  //     {
+  //       name: "Case Study",
+  //       path: "/case-studies",
+  //     },
+  //     {
+  //       name: "Awards",
+  //       path: "/award-nominations",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Legal",
+  //   list: [
+  //     {
+  //       name: "Privacy Policy",
+  //       path: "/privacy-policy",
+  //     },
+  //     {
+  //       name: "Terms of Use",
+  //       path: "/terms-of-use",
+  //     },
+  //     {
+  //       name: "General T&C",
+  //       path: "/general-subscription-t-cs",
+  //     },
+  //   ],
+  // },
 ];
 
 export const socialData = [

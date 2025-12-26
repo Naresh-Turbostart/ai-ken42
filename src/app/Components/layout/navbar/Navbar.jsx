@@ -7,31 +7,34 @@ import routes from "@/app/utils/routes";
 import { navSections } from "./data";
 
 const renderItemList = (items, { nested = false, onLinkClick } = {}) => (
-  <ul
-    className={`list-disc ${nested ? "pl-6" : "pl-4"} space-y-1 text-black text-sm`}
-  >
+  <div className={`space-y-1 text-black text-sm ${nested ? "pl-3" : ""}`}>
     {items.map((item) => {
       const key = typeof item === "string" ? item : item.title;
       const hasLink = typeof item === "object" && Boolean(item.path);
       return (
-        <li key={key}>
-          {hasLink ? (
-            <Link
-              href={item.path}
-              className="text-sm text-black transition-colors duration-150 hover:text-gray-600"
-              onClick={onLinkClick}
-            >
-              {item.title}
-            </Link>
-          ) : (
-            <span className="text-sm text-black">{item.title}</span>
-          )}
+        <div key={key} className="space-y-1">
+          <div className="bg-white  px-4 py-2 font-semibold text-black border border-transparent transition-colors duration-150 hover:bg-gray-100 hover:border-gray-200">
+            {hasLink ? (
+              <Link
+                href={item.path}
+                className="block w-full text-left text-sm text-black"
+                onClick={onLinkClick}
+              >
+                {item.title}
+              </Link>
+            ) : (
+              <span className="block text-sm text-black">{item.title}</span>
+            )}
+          </div>
           {item.children &&
-            renderItemList(item.children, { nested: true, onLinkClick })}
-        </li>
+            renderItemList(item.children, {
+              nested: true,
+              onLinkClick,
+            })}
+        </div>
       );
     })}
-  </ul>
+  </div>
 );
 
 const Navbar = () => {
@@ -77,7 +80,7 @@ const Navbar = () => {
     <>
       <div className="py-2 fixed top-0 left-0 z-50 w-full  pr-4">
         <div className="section-width">
-          <div className="flex items-center justify-center bg-white/90 border border-black/10 rounded-[2rem] shadow-sm">
+          <div className="flex items-center justify-center bg-white border border-black/10 rounded-[2rem] shadow-sm">
             <div className="w-full flex items-center justify-between gap-6 px-4 py-3">
               <Link href={routes.home} className="text-lg font-semibold text-black">
                 Ken42
@@ -85,7 +88,7 @@ const Navbar = () => {
 
               <div
                 ref={navRef}
-                className="hidden lg:flex flex-wrap gap-6 text-black"
+                className="hidden xl:flex items-center flex-wrap gap-6 text-black"
               >
                 {navSections.map((section) => (
                   <div key={section.title} className="relative">
@@ -93,7 +96,7 @@ const Navbar = () => {
                       <>
                         <button
                           type="button"
-                          className={`flex items-center gap-1 text-sm font-semibold ${section.accent ? "text-[#0f9340]" : "text-black"}`}
+                          className="flex items-center gap-1 text-sm font-semibold text-black"
                           onClick={() => toggleSection(section)}
                         >
                           {section.title}
@@ -104,7 +107,7 @@ const Navbar = () => {
                         </button>
 
                         <div
-                          className={`absolute top-full left-0 z-50 mt-3 w-64 rounded-2xl border border-black/10 bg-white p-4 shadow-lg transition-opacity duration-200 ${
+                          className={`absolute overflow-hidden top-full left-0 z-50 mt-3 w-56 rounded-md border border-black/10 bg-white  shadow-sm transition-opacity duration-200 ${
                             openSection === section.title ? "opacity-100" : "opacity-0 pointer-events-none"
                           }`}
                         >
@@ -116,7 +119,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         href={section.path ?? routes.home}
-                        className={`text-sm font-semibold ${section.accent ? "text-[#0f9340]" : "text-black"}`}
+                        className="text-sm font-semibold text-black"
                       >
                         {section.title}
                       </Link>
@@ -127,7 +130,7 @@ const Navbar = () => {
 
               <button
                 type="button"
-                className="lg:hidden flex flex-col gap-1.5"
+                className="xl:hidden flex flex-col gap-1.5"
                 onClick={() => setIsMenuOpen((prev) => !prev)}
                 aria-label="Toggle navigation"
               >
@@ -159,17 +162,17 @@ const Navbar = () => {
           <div className="space-y-8 z-5 px-6 py-6">
             {navSections.map((section) => (
               <div key={`mobile-${section.title}`}>
-                <p
-                  className={`text-lg font-semibold ${section.accent ? "text-[#0f9340]" : "text-black"}`}
-                >
+                  <p
+                    className="text-lg font-semibold text-black"
+                  >
                   {section.items?.length ? (
                     section.title
                   ) : (
-                    <Link
-                      href={section.path ?? routes.home}
-                      onClick={handleMobileLinkClick}
-                      className={`text-lg font-semibold ${section.accent ? "text-[#0f9340]" : "text-black"}`}
-                    >
+                      <Link
+                        href={section.path ?? routes.home}
+                        onClick={handleMobileLinkClick}
+                        className="text-lg font-semibold text-black"
+                      >
                       {section.title}
                     </Link>
                   )}
