@@ -1,10 +1,9 @@
 import React from 'react'
+import Hero from './Components/home/Hero'
 
 const page = () => {
   return (
-    <div className='section-width'>
-      home page 
-    </div>
+    <div> <Hero/>    </div>
   )
 }
 
