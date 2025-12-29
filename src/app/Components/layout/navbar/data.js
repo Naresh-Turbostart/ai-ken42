@@ -1,9 +1,9 @@
 import routes from "@/app/utils/routes";
 
 export const navSections = [
-  {
-    title: "Contact",
-    path: routes.contact,
+  // {
+  //   title: "Contact",
+  //   path: routes.contact,
     // items: [
     //   {
     //     title: "E-mail",
@@ -18,7 +18,7 @@ export const navSections = [
     //     path: routes.contactAddress,
     //   },
     // ],
-  },
+  // },
   {
     title: "Cities served",
     path: routes.citiesServed,
@@ -29,6 +29,8 @@ export const navSections = [
   },
   {
     title: "Services Offered",
+        path: routes.servicesOffered,
+
     // items: [
     //   {
     //     title: "Click to expand use cases",

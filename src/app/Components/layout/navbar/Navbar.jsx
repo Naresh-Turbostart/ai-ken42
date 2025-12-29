@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import routes from "@/app/utils/routes";
 import { navSections } from "./data";
-
+import Image from "next/image";
 const renderItemList = (items, { nested = false, onLinkClick } = {}) => (
   <div className={`space-y-1 text-black text-sm ${nested ? "pl-3" : ""}`}>
     {items.map((item) => {
@@ -80,10 +80,16 @@ const Navbar = () => {
     <>
       <div className="py-2 fixed top-0 left-0 z-50 w-full  pr-4">
         <div className="section-width">
-          <div className="flex items-center justify-center bg-white border border-black/10 rounded-[2rem] shadow-sm">
-            <div className="w-full flex items-center justify-between gap-6 px-4 py-3">
-              <Link href={routes.home} className="text-lg font-semibold text-black">
-                Ken42
+          <div className="flex items-center justify-center bg-white border border-black/10 rounded-full shadow-sm">
+            <div className="w-full flex items-center justify-between gap-6 px-10 py-3">
+              <Link href={routes.home} className="text-lg font-semibold footer-grayscale text-black">
+                 <Image
+                                   src="/images/footer/logo.svg"
+                                   className="w-16 "
+                                   width={500}
+                                   height={500}
+                                   alt="logo"
+                                 />
               </Link>
 
               <div

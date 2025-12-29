@@ -278,6 +278,10 @@ body {
   );
 }
 
+.footer-grayscale img {
+  filter: grayscale(100%) brightness(0.35);
+}
+
 .hover-boxshadow:hover {
   /* border-image: linear-gradient(
     180deg,

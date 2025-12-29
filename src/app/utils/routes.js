@@ -2,7 +2,7 @@ const routes = {
   // navbar links
   home: "/",
   about: "/about", // Updated to an absolute link to the home page
-  faq: "/#faq",
+  faq: "/faq",
   services: "/services",
   programmatic: "/services/programmatic",
   measureengine: "/services/measure",
@@ -41,7 +41,7 @@ const routes = {
     contactAddress: "/contact#address",
     citiesServed: "/cities-served",
     audience: "/audience",
-    servicesOffered: "/services/offered",
+    servicesOffered: "/services-offered",
     servicesUseCases: "/services/use-cases",
     servicesProductDetails: "/services/product-details",
     servicesCapabilities: "/services/capabilities",
